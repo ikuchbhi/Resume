@@ -1,0 +1,5 @@
+# All build files 
+*.aux
+*.out
+*.gz
+*.log
