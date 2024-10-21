@@ -1,46 +1,218 @@
-\documentclass[11pt, letterpaper]{article}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-% For links to any relevant
-\usepackage{hyperref}
-% Icons
-\usepackage{fontawesome}
-% Custom Icons that are not in FA
-\usepackage{graphicx}
+\documentclass[letterpaper,11pt]{article}
 
-\hypersetup{
-    colorlinks=false,
-    linkcolor=none,
-    hidelinks=true,
-    filecolor=none,      
-    urlcolor=none,
-    pdftitle={Aman Ranjan},
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
-\title{\textbf{Aman Ranjan}}
-\author{Aman Ranjan}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-\begin{center}
-% Header
-\maketitle
-% References to mail (personal) and phone,
-\faMobilePhone{} +91-8591646417 
-$\vert$
-\faEnvelopeO{} ranjanaman0711@gmail.com
-% Links to GitHub, LinkedIn, CodeForces
-$\vert$
-\faGithubSquare{} \href{https://www.github.com/AmanR0711}{GitHub}
-$\vert$
-\faLinkedin{} \href{https://www.linkedin.com/in/aman-ranjan-b6662328a/}{LinkedIn}
-$\vert$
-% CodeForces Logo
-\href{https://www.codeforces.com/profile/kuchbhi11}{
-    \includegraphics[scale=0.05]{assets/codeforces_logo.png}
-}
-% Location
-$\vert$
-\faMapPin{} Navi Mumbai, India
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
+\begin{center}
+    \textbf{\Huge \scshape Aman Ranjan} 
+        \\ \vspace{1pt}
+    \small +91 85916 46417 $|$ 
+    \href{mailto:ranjanaman0711@gmail.com}
+        {\underline{ranjanaman0711@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/aman-ranjan-b6662328a/}
+        {LinkedIn} $|$
+    \href{https://github.com/ikuchbhi}
+        {GitHub}
 \end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {BITS Pilani, Hyderabad Campus}{Hyderabad, India}
+      {B.E. (Hons.) in Computer Science - CGPA 8.46/10.0}{Oct. 2022 - May 2026}
+    \resumeSubheading
+      {New Bombay City School}{Navi Mumbai, India}
+      {12th Grade - CBSE - 92.6\%}{Apr. 2021 - Mar. 2022}
+    \resumeSubheading
+      {ASP Public School}{Navi Mumbai, India}
+      {10th Grade - CBSE - 97.4\%}{Apr. 2019 - Mar. 2020}
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{
+        \item{
+            \textbf
+            {Languages}
+            {: Java, Python, C, C++, SQL (Postgres), JavaScript, HTML/CSS, ReactJS, Dart} \\
+            \textbf
+            {Frameworks}
+            {: ReactJS, NodeJS, Flutter, ExpressJS, NodeJS} \\
+            \textbf
+            {Developer Tools}
+            {: Git, Docker, GitHub Actions}
+        }
+    }
+ \end{itemize}
+%-------------------------------------------
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Summer Intern}{May 2024 - Jul. 2024}
+      {Contenterra Software Pvt. Ltd.}{Hyderabad, India}
+      \resumeItemListStart
+        \resumeItem{Developed a \textbf{Flutter-based Personal Search Assistant (PSA) application} to access data from various sources such as Google Drive, DropBox and Evernote}
+        \resumeItem{Implemented \textbf{unit tests} and \textbf{Github Actions} to automate running tests and building the application, reducing redundant development cycles by \textbf{50\%}}
+      \resumeItemListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {
+            \textbf{FestMate} $|$ 
+            \emph{Python, FastAPI, ReactJS, PostgreSQL, Docker} \\
+        }{}
+        \resumeItemListStart
+            \resumeItem{Engineered a full-stack web-based fest management platform with a \textbf{FastAPI backend} and \textbf{ReactJS frontend}, capable of handling event registrations for \textbf{1000+ users in real-time.}}
+            \resumeItem{Optimized database performance by implementing \textbf{PostgreSQL triggers and indexes}, reducing data retrieval times by 30\%, ensuring efficient large-scale data operations.}
+            \resumeItem{Leveraged Docker to containerize both frontend and backend, streamlining deployment and \textbf{reducing setup time by 50\%.}}
+        \resumeItemListEnd
+        
+        \resumeProjectHeading
+            {
+                \textbf{KanbanDone} $|$ 
+                \emph{NestJS, NodeJS, Docker, Flutter} \\
+            }{}
+        \resumeItemListStart
+            \resumeItem{A Trello-like application that organizes Tasks into Lists and Boards to enhance productivity for projects}
+            \resumeItem{Implemented the backend using \textbf{NestJS} and containerized it using \textbf{Docker}; the frontend is written in \textbf{Flutter.}}
+            \resumeItem{Implemented Card drag-and-drop functionality and realtime synchronization via \textbf{Socket.io} to enhance productivity.}
+        \resumeItemListEnd
+    
+    \resumeProjectHeading
+        {
+            \textbf{BITSBids} $|$ 
+            \emph{ReactJS, NodeJS, Docker, Spring Boot} \\
+        }{}
+        \resumeItemListStart
+            \resumeItem{Developed an auction-based marketplace for \textbf{300+ BITSians} to buy and sell used goods, featuring a \textbf{real-time bidding system with secure transactions.}}
+            \resumeItem{Implemented real-time chat functionality using \textbf{Socket.io}, facilitating instant communication between buyers and sellers.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Positions of Responsibility}
+    \resumeProjectHeading
+        {
+            \textbf{Technical Team Lead, SWD Nucleus}
+        }{}
+        \resumeItemListStart
+            \resumeItem{Developed a payment gateway for various outlets on campus, catering to \textbf{5000+ students} and handling \textbf{1000+ orders per day} overall}
+            \resumeItem{Implemented a outstation portal for smart entry-exit into the campus, reducing wait times and redundancies by 75\%}
+            \resumeItem{Built the \textbf{SWD BPHC} app, used by \textbf{3000+ students regularly} to access various student-related services}
+            \resumeItem{Conducted monthly mess registrations for 5000+ students on campus}
+        \resumeItemListEnd
 \end{document}
