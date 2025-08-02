@@ -1,0 +1,185 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Aman Ranjan (adapted to Sourabh Bajaj's template)
+%------------------------
+\renewcommand{\labelitemi}{}
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{fontawesome5}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Aman Ranjan} & +91 85916 46417 \\
+  \href{mailto:ranjanaman0711@gmail.com}{ranjanaman0711@gmail.com} & 
+  \faLinkedin\
+  \href{https://www.linkedin.com/in/amanranjan05/}{LinkedIn} $|$
+  \faGithub\
+  \href{https://github.com/ikuchbhi}{GitHub} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {BITS Pilani, Hyderabad Campus}{Hyderabad, India}
+    {B.E. (Hons.) in Computer Science; CGPA: 8.18/10.0}{Oct 2022 -- May 2026}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*]
+    \item{
+        \textbf{Relevant Coursework:} Machine Learning, Data Mining, Probability and Statistics, Linear Algebra, Computational Methods for Economics    
+    }
+    \item{
+        \textbf{Languages:} Python, R, SQL
+    } \\
+    \item{
+        \textbf{Frameworks/Tools:} scikit-learn, NumPy, pandas, Matplotlib, Seaborn, Git, Docker, FastAPI, PostgreSQL
+    }
+\end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Contenterra Software Pvt. Ltd.}{Hyderabad, India}
+    {Summer Intern}{May 2024 -- Jul 2024}
+    \resumeItemListStart
+      \resumeItem{
+          Built core modules for a \textbf{Personal Search Assistant} integrating file retrieval from \textbf{Google Drive}, \textbf{Dropbox}, and \textbf{Evernote}.
+      }
+      \resumeItem{
+        Developed and deployed a \textbf{FastAPI backend} with \textbf{OAuth2-based authentication}.
+      }
+      \resumeItem{
+        Set up \textbf{CI/CD pipelines} via \textbf{GitHub Actions} for feedback loop automation and streamlined development.
+      }
+      \resumeItem{
+        Contributed to infrastructure enabling \textbf{future integration of GenAI-based retrieval systems} by designing \textbf{modular APIs} and \textbf{extensible data schemas}.
+      }
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+   \resumeProjectHeading
+    {\textbf{Causal Impact of Mission Indradhanush} $|$ \emph{R, Econometrics}}{}
+  \resumeItemListStart
+    \resumeItem{
+        Investigated \textbf{causal effects} of Mission Indradhanush, a \textbf{public health campaign} on \textbf{household spending behavior}.
+    }
+    \resumeItem{
+        Worked with the noisy, sparse panel data from the \textbf{Consumer Pyramid Survey} datasets, a large-scale longitudinal survey data comprising of data related to over \textbf{174K+ households} across various districts in India.
+    }
+    \resumeItem{
+        Engineered features to approximate \textbf{healthcare expenditure categories}, standardize \textbf{consumption variables}, and \textbf{align time periods with policy rollout phases}.
+    }
+    \resumeItem{
+        Applied econometric methods like \textbf{Differences-in-Differences} and \textbf{Propensity Score Matching} to estimate policy impact on \textbf{child healthcare} and \textbf{discretionary spending}.
+    }
+    \resumeItem{
+        Automated the \textbf{end-to-end pipeline} for regression analysis and reproducible reporting using \textbf{RMarkdown}.
+    }
+  \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Predictive Energy Balancing for Smart Grids
+} $|$ \emph{Python, scikit-learn, pandas, FastAPI, matplotlib, Seaborn}}{}
+      \resumeItemListStart        
+        \resumeItem{
+        Built an \textbf{ML pipeline} to \textbf{forecast solar energy} output and align supply with \textbf{smart grid demand}, improving renewable energy utilization.
+        }
+        \resumeItem{
+        Trained and evaluated \textbf{time-series models} using \textbf{weather and generation data}; achieved \textbf{low prediction error} for \textbf{multi-day forecasts}.
+        }
+        \resumeItem{Developed a \textbf{FastAPI backend} with \textbf{visualizations} to serve \textbf{real-time predictions} and \textbf{consumption insights}.}
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Popular Dishes Finder from Zomato Dataset
+} $|$ \emph{Python, pandas, association rule mining, Apriori}}{}
+  \resumeItemListStart
+    \resumeItem{Mined \textbf{real-world restaurant data} to extract \textbf{high-support} and \textbf{high-confidence} \textbf{dish combinations} using \textbf{association rule learning}.}
+    \resumeItem{Applied \textbf{data cleaning} and \textbf{frequent pattern algorithms} to \textbf{identify popular food items} across \textbf{cities} and \textbf{cuisines}.}
+    \resumeItem{Visualized \textbf{consumer preferences} and \textbf{item set distributions} to \textbf{support recommendation strategies}.}
+  \resumeItemListEnd
+  
+\resumeSubHeadingListEnd
+
+\section{Position of Resposibility}
+\resumeSubHeadingListStart
+\resumeProjectHeading{
+    \textbf{Technical Lead}, \textbf{SWD Nucleus}
+}{Jun 2024 – Jun 2025}
+\resumeItemListStart
+\resumeItem{
+ Lead development and maintenance of critical campus-wide digital infra (\textbf{Outpass portal} for outstation travel; \textbf{SWDPay}, a payment gateway for cashless transactions at campus outlets and fests; \textbf{monthly Mess Registrations}) used by \textbf{4,000+ students}.  
+}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\end{document}

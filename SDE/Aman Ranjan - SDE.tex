@@ -1,0 +1,209 @@
+%-------------------------
+% Resume in LaTeX
+% Author: Aman Ranjan (adapted to Sourabh Bajaj's template)
+%------------------------
+\documentclass[letterpaper,9pt]{article}
+
+\usepackage{latexsym}
+\usepackage{fontawesome5}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Aman Ranjan} & +91 85916 46417 \\
+  \href{mailto:ranjanaman0711@gmail.com}{ranjanaman0711@gmail.com} & 
+  \faLinkedin\
+  \href{https://www.linkedin.com/in/amanranjan05/}{LinkedIn} $|$
+  \faGithub\
+  \href{https://github.com/ikuchbhi}{GitHub} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {BITS Pilani, Hyderabad Campus}{Hyderabad, India}
+    {B.E. (Hons.) in Computer Science; CGPA: 8.18/10.0}{Oct 2022 -- May 2026}
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+% \begin{itemize}[leftmargin=*]
+%     \item{
+        Java, Python, C++, Dart, SQL (PostgreSQL),
+        % \textbf{Frameworks/Tools:} 
+        Spring Boot, FastAPI, NestJS, ReactJS, Flutter, NodeJS, Redis, Docker, GraphQL, GitHub Actions
+%     }
+% \end{itemize}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Contenterra Software Pvt. Ltd.}{Hyderabad, India}
+    {Summer Intern}{May 2024 -- Jul 2024}
+    \resumeItemListStart
+      \resumeItem{
+          Collaborated in a team of 3 to build a \textbf{Flutter-based Personal Search Assistant app} aimed at \textbf{unified file access} across \textbf{Google Drive}, \textbf{Dropbox}, and \textbf{Evernote}.
+      }
+      \resumeItem{
+        Focused on integrating the Google Drive API, implementing \textbf{OAuth 2.0 authentication} and file metadata retrieval via \textbf{FastAPI backend services}.
+      }
+      \resumeItem{
+        Set up \textbf{CI/CD pipelines} with \textbf{GitHub Actions} to automate builds, streamlining development.
+      }
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+        {\textbf{BITSBids} $|$ \emph{Spring Boot, ReactJS, GraphQL, Redis, Docker}}{}
+      \resumeItemListStart
+        \resumeItem{
+            Built a \textbf{secure auction marketplace} backend for \textbf{300+ BITSians}, handling \textbf{real-time bidding} and \textbf{chat} using \textbf{GraphQL Subscriptions}.
+        }
+        \resumeItem{
+            Integrated \textbf{Redis-backed Spring Sessions} for session management.
+        }
+        \resumeItem{
+            Ensured \textbf{atomicity and consistency in real-time} bidding using \textbf{GraphQL mutations} with \textbf{PostgreSQL row-level locking} and \textbf{synchronized service-layer execution}.
+        }
+        \resumeItem{
+            Designed \textbf{schema-driven GraphQL APIs} for \textbf{structured querying} and \textbf{modular frontend integration}.
+        }
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{FestMate} $|$ \emph{Python, FastAPI, ReactJS, PostgreSQL, Docker}}{}
+  \resumeItemListStart
+    \resumeItem{
+        Developed a \textbf{full-stack fest management system} using \textbf{ReactJS frontend + FastAPI backend} capable of supporting \textbf{1,000+ users} and event registrations. 
+    }
+    \resumeItem{
+        Implemented \textbf{FastAPI backend services} with \textbf{optimized PostgreSQL queries}, using \textbf{triggers}, \textbf{indexing, and async routes} to improve data retrieval latency by \textbf{30\%}.
+    }
+    \resumeItem{
+        Containerised the application using \textbf{Docker Compose}, ensuring \textbf{consistent environments} across \textbf{dev} and \textbf{CI/CD pipelines}. 
+    }
+  \resumeItemListEnd
+
+   \resumeProjectHeading
+    {\textbf{KanbanDone} $|$ \emph{Flutter, NestJS, SocketIO, Docker}}{}
+  \resumeItemListStart
+    \resumeItem{
+        Built a \textbf{Trello-style}, \textbf{Kanban} board-centric \textbf{Flutter} frontend with \textbf{NestJS} backend supporting real-time sync across Boards, Lists and Tasks using \textbf{Socket.IO}.
+    }
+    \resumeItem{
+        Implemented \textbf{user-level access control} and enabled \textbf{multi-user collaboration}, allowing \textbf{up to 5 teammates} to \textbf{securely edit} and \textbf{manage Boards, Lists, and Tasks} in real-time.
+    }
+    \resumeItem{
+        Containerised the application using \textbf{Docker Compose} to ensure \textbf{consistent environments} and working in both \textbf{dev} and \textbf{CI/CD environments}.
+    }
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------OPEN SOURCE CONTRIBUTIONS----------------
+\section{Open Source Contributions}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+    {
+    \textbf{Handoutsforyou} 
+        % \href{https://github.com/thenicekat/handoutsforyou}{\faLink}
+        $|$ 
+        \emph{PR \#73}
+    }{}
+  \resumeItemListStart
+    \resumeItem{
+        Added a static blog module to \textbf{h4u.app}, an \textbf{open-source campus app} used by \textbf{1000+ BITSians across all campuses}, enabling long-form articles hosted via Google Drive Markdown files.
+    }
+    \resumeItem{
+        Designed blog layout, navigation, and rendering logic to support easy content publishing.
+    }
+    \resumeItem{
+        Implemented a contribution form that \textbf{generates articles in a dedicated Drive folder}, streamlining submissions through a familiar, Drive-based workflow.
+    }
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%-----------POSITIONS OF RESPONSIBILITY-----------------
+\section{Positions of Responsibility}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {\textbf{Technical Team Lead, SWD Nucleus}}{}
+  \resumeItemListStart
+    \resumeItem{
+        Built \textbf{SWDPay}, a payment gateway infrastructure for campus outlets, handling \textbf{1000+ orders/day} accessible by \textbf{5000+ students}.
+    }
+    \resumeItem{
+        Streamlined the outstation process by developing \textbf{a digital Outpass system} with \textbf{ID card scanning}, automating campus exit/entry and reducing manual processing effort.
+    }
+    \resumeItem{
+        Oversaw backend support for monthly mess registrations used monthly by \textbf{5000+ students}, ensuring minimal downtime.
+    }
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
